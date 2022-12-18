@@ -42,6 +42,7 @@ echo "$ncpus physical CPUs, $corepercpu cores/CPU,\
 runbench() {
   $* ./timesyscall
   $* ./timectxsw
+  $* ./timectxsw_umode
   $* ./timetctxsw
   $* ./timetctxsw2
 }
