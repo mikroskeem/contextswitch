@@ -13,14 +13,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-CC = gcc
+CC = cc
 CFLAGS = -pthread -march=native -O3 -mno-avx -D_XOPEN_SOURCE=600 -D_GNU_SOURCE -std=c99 \
          -W -Wall -Werror
 LDFLAGS = -lrt -lpthread
 
 TARGETS = timectxsw timectxswws timesyscall timetctxsw timetctxsw2
 
-all: bench
+all: $(TARGETS)
 
 bench: $(TARGETS)
 	./cpubench.sh
